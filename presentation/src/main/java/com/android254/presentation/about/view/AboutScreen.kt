@@ -15,17 +15,40 @@
  */
 package com.android254.presentation.about.view
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import coil.ImageLoader
+import com.android254.presentation.common.components.DroidconAppBar
+import com.android254.presentation.common.components.HeaderText
 import com.android254.presentation.common.theme.DroidconKE2022Theme
 
 @Composable
 fun AboutScreen() {
-    Text(modifier = Modifier.testTag("heading"), text = "About Screen")
+    Column(modifier = Modifier.padding(0.dp)
+        ){
+       Row(){ DroidconAppBar(isSignedIn = true)}
+        AboutImage()
+        HeaderText(text = "About")
+
+    }
+
 }
+
+
+
+
+
 
 @Preview
 @Composable

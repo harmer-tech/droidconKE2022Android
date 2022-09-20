@@ -77,7 +77,7 @@ fun SessionsScreen(darkTheme: Boolean = isSystemInDarkTheme()) {
                 }
                 Spacer(Modifier.width(16.dp))
                 EventDaySelectorButton(
-                    title = "",
+                    title = "18th",
                     subtitle = "Day 3",
                     onClick = { /*TODO*/ },
                     selected = false
